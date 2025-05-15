@@ -1,59 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>DogeSA Meme Coin | Official Mobile Site</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#2d6cdf;--accent:#ffd141;--bg:#fff;--text:#111;--muted:#606060;--radius:14px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
-.container{width:92%;max-width:600px;margin:0 auto}
-.section{padding:2.6rem 0}
-h1,h2,h3{font-weight:600;line-height:1.25}
-h1{font-size:1.95rem;margin-bottom:.7rem}
-h2{font-size:1.5rem;margin-bottom:1rem}
-p{margin-bottom:1rem;color:var(--muted)}
-.hero{background:var(--primary);color:#fff;text-align:center;padding:3rem 0 4.5rem;border-bottom-left-radius:var(--radius);border-bottom-right-radius:var(--radius)}
-.hero img.logo{width:140px;height:140px;object-fit:contain;margin:1.4rem auto 1.2rem;display:block}
-.btn{display:inline-block;background:var(--accent);color:#000;font-weight:600;padding:.95rem 1.6rem;border-radius:var(--radius);text-decoration:none;transition:transform .18s}
-.btn:hover{transform:translateY(-3px)}
-.center{text-align:center}
-.gallery-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:.5rem}
-.gallery{display:flex;flex-wrap:nowrap;gap:1rem;scroll-snap-type:x mandatory}
-.gallery img{flex:0 0 auto;width:200px;height:200px;object-fit:cover;border-radius:var(--radius);scroll-snap-align:start;border:1px solid #e7e7e7}
-.roadmap-item{border:1px solid #e7e7e7;border-radius:var(--radius);padding:1.2rem;margin-bottom:1rem}
-.social{display:flex;justify-content:center;gap:1.2rem}
-.social a{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;background:var(--primary);color:#fff;text-decoration:none;font-size:1.2rem}
-#topBtn{position:fixed;bottom:20px;right:18px;z-index:99;background:var(--primary);color:#fff;border:none;width:46px;height:46px;border-radius:50%;font-size:1.45rem;display:none;align-items:center;justify-content:center}
-#topBtn.show{display:flex}
-footer{text-align:center;padding:2rem 0 3rem;font-size:.9rem;color:var(--muted)}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>DogeSA Meme Coin | Official Mobile Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#2d6cdf;     /* campaign blue */
+      --accent:#ffd141;      /* coin gold */
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#606060;
+      --radius:14px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .container{width:92%;max-width:600px;margin:0 auto}
+    .section{padding:2.6rem 0}
+    h1,h2,h3{font-weight:600;line-height:1.25}
+    h1{font-size:1.95rem;margin-bottom:.7rem}
+    h2{font-size:1.5rem;margin-bottom:1rem}
+    p{margin-bottom:1rem;color:var(--muted)}
+    /* ---------- Hero ---------- */
+    .hero{background:var(--primary);color:#fff;text-align:center;padding:3rem 0 4rem;border-bottom-left-radius:var(--radius);border-bottom-right-radius:var(--radius)}
+    .hero p{color:#fff;line-height:1.6;font-size:1.05rem}
+    .hero img.logo{width:140px;height:140px;object-fit:contain;margin:1.4rem auto 1.2rem;display:block}
+    .btn{display:inline-block;background:var(--accent);color:#000;font-weight:600;padding:.95rem 1.6rem;border-radius:var(--radius);text-decoration:none;transition:transform .18s}
+    .btn:hover{transform:translateY(-3px)}
+    .center{text-align:center}
+    /* ---------- Gallery ---------- */
+    .gallery-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:.5rem}
+    .gallery{display:flex;flex-wrap:nowrap;gap:1rem;scroll-snap-type:x mandatory}
+    .gallery img{flex:0 0 auto;width:200px;height:200px;object-fit:cover;border-radius:var(--radius);scroll-snap-align:start;border:1px solid #e7e7e7}
+    /* ---------- Social ---------- */
+    .social{display:flex;justify-content:center;gap:1.2rem}
+    .social a{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;background:var(--primary);color:#fff;text-decoration:none;font-size:1.2rem}
+    /* ---------- Scroll-to-Top ---------- */
+    #topBtn{position:fixed;bottom:20px;right:18px;z-index:99;background:var(--primary);color:#fff;border:none;width:46px;height:46px;border-radius:50%;font-size:1.45rem;display:none;align-items:center;justify-content:center}
+    #topBtn.show{display:flex}
+    footer{text-align:center;padding:2rem 0 3rem;font-size:.9rem;color:var(--muted)}
+  </style>
 </head>
 <body>
-<header class="hero" id="top"><div class="container">
-<h1>DogeSA Meme Coin</h1>
-<p>December 19, 2011<br>A prophet arose.<br>He told the entire nation of Korea to buy Doge,<br>and Dogecoin delivered 40,000% gains.<br>That prophet was <strong>Kim Moon-soo</strong>, a.k.a. <strong>DogeSA</strong>.</p>
-<img src="logo.png" alt="DogeSA Coin Logo" class="logo">
-<a href="#buy" class="btn">Buy Meme Coin</a>
-</div></header>
-<section class="section container" id="gallery"><h2 class="center">Gallery</h2><div class="gallery-wrapper"><div id="galleryInner" class="gallery"></div></div></section>
-<section class="section container" id="roadmap"><h2 class="center">Roadmap</h2><div id="roadmapList"></div></section>
-<section class="section container center" id="buy"><h2>Join the Movement</h2><p>Purchase DogeSA Meme Coin and be part of the prophecy.</p><a href="https://example-dex.com/swap?token=DOGESA" class="btn">Go to DEX</a></section>
-<section class="section container" id="social"><h2 class="center">Community</h2><div class="social" style="margin-top:1rem"><a href="https://t.me/DogeSA_KMS" aria-label="Telegram" target="_blank" rel="noopener">T</a><a href="https://x.com/DogesaKMS" aria-label="Twitter" target="_blank" rel="noopener">X</a><a href="https://open.kakao.com/o/gp6TnTvh" aria-label="KakaoTalk" target="_blank" rel="noopener">K</a></div></section>
-<footer class="container">© 2025 DogeSA Meme Coin Campaign. All rights reserved.</footer>
-<button id="topBtn" aria-label="Back to top">↑</button>
-<script>
-const galleryImages=["gallery1.png","gallery2.png","gallery3.png"];
-const roadmapPhases=[{t:"Phase 1",d:"<!-- Add details -->"},{t:"Phase 2",d:"<!-- Add details -->"},{t:"Phase 3",d:"<!-- Add details -->"}];
-function populateGallery(){const g=document.getElementById("galleryInner");g.innerHTML="";galleryImages.forEach(s=>{const i=document.createElement("img");i.src=s;i.alt="DogeSA logo";g.appendChild(i);});}
-function populateRoadmap(){const l=document.getElementById("roadmapList");l.innerHTML="";roadmapPhases.forEach(p=>{const d=document.createElement("div");d.className="roadmap-item";d.innerHTML=`<h3>${p.t}</h3><p>${p.d}</p>`;l.appendChild(d);});}
-function handleScroll(){document.getElementById("topBtn").classList.toggle("show",window.scrollY>350);} 
-function scrollTopSmooth(){window.scrollTo({top:0,behavior:"smooth"});}
-document.getElementById("topBtn").addEventListener("click",scrollTopSmooth);
-window.addEventListener("scroll",handleScroll);
-document.addEventListener("DOMContentLoaded",()=>{populateGallery();populateRoadmap();});
-</script>
+  <!-- Hero / Main -->
+  <header class="hero" id="top">
+    <div class="container">
+      <h1>DogeSA Meme Coin</h1>
+      <p>
+        December 19, 2011<br>
+        A prophet arose.<br>
+        He told the entire nation of Korea to buy Doge,<br>
+        and Dogecoin delivered 40,000% gains.<br>
+        That prophet was <strong>Kim Moon‑soo</strong>, a.k.a. <strong>DogeSA</strong>.
+      </p>
+      <img src="logo.png" alt="DogeSA Coin Logo" class="logo">
+      <a href="#buy" class="btn">Buy Meme Coin</a>
+    </div>
+  </header>
+
+  <!-- Gallery -->
+  <section class="section container" id="gallery">
+    <h2 class="center">Gallery</h2>
+    <div class="gallery-wrapper">
+      <div id="galleryInner" class="gallery"></div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section container center" id="buy">
+    <h2>Join the Movement</h2>
+    <p>Purchase DogeSA Meme Coin and be part of the prophecy.</p>
+    <a href="https://example-dex.com/swap?token=DOGESA" class="btn">Go to DEX</a>
+  </section>
+
+  <!-- Social Links -->
+  <section class="section container" id="social">
+    <h2 class="center">Community</h2>
+    <div class="social" style="margin-top:1rem">
+      <a href="https://t.me/DogeSA_KMS" aria-label="Telegram" target="_blank" rel="noopener">T</a>
+      <a href="https://x.com/DogesaKMS" aria-label="Twitter" target="_blank" rel="noopener">X</a>
+      <a href="https://open.kakao.com/o/gp6TnTvh" aria-label="KakaoTalk" target="_blank" rel="noopener">K</a>
+    </div>
+  </section>
+
+  <footer class="container">© 2025 DogeSA Meme Coin Campaign. All rights reserved.</footer>
+  <button id="topBtn" aria-label="Back to top">↑</button>
+
+  <script>
+    /* ----- Dynamic Gallery ----- */
+    const galleryImages=["gallery1.png","gallery2.png","gallery3.png"];
+    function populateGallery(){const g=document.getElementById("galleryInner");g.innerHTML="";galleryImages.forEach(src=>{const i=document.createElement("img");i.src=src;i.alt="DogeSA logo";g.appendChild(i);});}
+
+    /* ----- Scroll‑to‑top ----- */
+    const topBtn=document.getElementById("topBtn");
+    function toggleTopBtn(){topBtn.classList.toggle("show",window.scrollY>350);}  
+    function scrollTopSmooth(){window.scrollTo({top:0,behavior:"smooth"});}
+    topBtn.addEventListener("click",scrollTopSmooth);
+    window.addEventListener("scroll",toggleTopBtn);
+
+    document.addEventListener("DOMContentLoaded",populateGallery);
+  </script>
 </body>
 </html>
