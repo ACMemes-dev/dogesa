@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary:#2d6cdf;     /* campaign blue */
+      --primary:#ff7f2d;      /* theme orange */
       --accent:#ffd141;      /* coin gold */
       --bg:#ffffff;
       --text:#111111;
@@ -35,7 +35,8 @@
     .gallery img{flex:0 0 auto;width:200px;height:200px;object-fit:cover;border-radius:var(--radius);scroll-snap-align:start;border:1px solid #e7e7e7}
     /* ---------- Social ---------- */
     .social{display:flex;justify-content:center;gap:1.2rem}
-    .social a{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;background:var(--primary);color:#fff;text-decoration:none;font-size:1.2rem}
+    .social a{display:inline-flex;width:48px;height:48px;border-radius:50%;align-items:center;justify-content:center;background:transparent;border:2px solid var(--primary);}
+    .social img{width:24px;height:24px}
     /* ---------- Scroll-to-Top ---------- */
     #topBtn{position:fixed;bottom:20px;right:18px;z-index:99;background:var(--primary);color:#fff;border:none;width:46px;height:46px;border-radius:50%;font-size:1.45rem;display:none;align-items:center;justify-content:center}
     #topBtn.show{display:flex}
@@ -52,7 +53,7 @@
         A prophet arose.<br>
         He told the entire nation of Korea to buy Doge,<br>
         and Dogecoin delivered 40,000% gains.<br>
-        That prophet was <strong>Kim Moon‑soo</strong>, a.k.a. <strong>DogeSA</strong>.
+        That prophet was <strong>Kim Moon-soo</strong>, a.k.a. <strong>DogeSA</strong>.
       </p>
       <img src="logo.png" alt="DogeSA Coin Logo" class="logo">
       <a href="#buy" class="btn">Buy Meme Coin</a>
@@ -78,9 +79,9 @@
   <section class="section container" id="social">
     <h2 class="center">Community</h2>
     <div class="social" style="margin-top:1rem">
-      <a href="https://t.me/DogeSA_KMS" aria-label="Telegram" target="_blank" rel="noopener">T</a>
-      <a href="https://x.com/DogesaKMS" aria-label="Twitter" target="_blank" rel="noopener">X</a>
-      <a href="https://open.kakao.com/o/gp6TnTvh" aria-label="KakaoTalk" target="_blank" rel="noopener">K</a>
+      <a href="https://t.me/DogeSA_KMS" target="_blank" rel="noopener" aria-label="Telegram"><img src="telegram.svg" alt="Telegram"></a>
+      <a href="https://x.com/DogesaKMS" target="_blank" rel="noopener" aria-label="Twitter"><img src="twitter.svg" alt="Twitter"></a>
+      <a href="https://open.kakao.com/o/gp6TnTvh" target="_blank" rel="noopener" aria-label="KakaoTalk"><img src="kakao.svg" alt="KakaoTalk"></a>
     </div>
   </section>
 
@@ -92,7 +93,7 @@
     const galleryImages=["gallery1.png","gallery2.png","gallery3.png"];
     function populateGallery(){const g=document.getElementById("galleryInner");g.innerHTML="";galleryImages.forEach(src=>{const i=document.createElement("img");i.src=src;i.alt="DogeSA logo";g.appendChild(i);});}
 
-    /* ----- Scroll‑to‑top ----- */
+    /* ----- Scroll-to-top ----- */
     const topBtn=document.getElementById("topBtn");
     function toggleTopBtn(){topBtn.classList.toggle("show",window.scrollY>350);}  
     function scrollTopSmooth(){window.scrollTo({top:0,behavior:"smooth"});}
